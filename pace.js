@@ -267,6 +267,9 @@
 
     Bar.prototype.update = function(prog) {
       this.progress = prog;
+      
+      Pace.trigger('progress', prog);
+      
       return this.render();
     };
 
